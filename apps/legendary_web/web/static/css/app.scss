@@ -1,0 +1,20 @@
+/* This file is for your main application css. */
+.player-row {
+  display: flex;
+  width: 100%;
+  .discard {
+    margin-right: 5em;
+  }
+  .hand {
+    flex-grow: 1;
+    .card {
+      border: 1px solid #333333;
+      border-radius: 2px;
+      padding: 1em;
+      margin: 1em;
+    }
+  }
+  .deck {
+    margin-left: 5em;
+  }
+}

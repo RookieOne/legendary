@@ -2,4 +2,20 @@
 
 <%= for player <- @game["players"] do %>
   <h3><%= player["name"] %></h3>
+
+  <div class="player-row">
+    <div class="discard">
+      <%= Enum.count(player["discard"]) %>
+    </div>
+    <div class="hand">
+      <%= for card <- player["hand"] do %>
+        <div class="card">
+          <%= card["name"] %>
+        </div>
+      <% end %>
+    </div>
+    <div class="deck">
+      <%= Enum.count(player["deck"]) %>
+    </div>
+  </div>
 <% end %>
