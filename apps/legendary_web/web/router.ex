@@ -17,6 +17,10 @@ defmodule LegendaryWeb.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+
+    get "/games", GameController, :index
+    get "/games/:id", GameController, :show
+    post "/games", GameController, :create
   end
 
   # Other scopes may use custom stacks.

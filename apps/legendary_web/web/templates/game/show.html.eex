@@ -1,0 +1,5 @@
+<h1>Game <%= @game_record.id %></h1>
+
+<%= for player <- @game["players"] do %>
+  <h3><%= player["name"] %></h3>
+<% end %>

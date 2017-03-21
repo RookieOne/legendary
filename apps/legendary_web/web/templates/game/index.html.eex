@@ -1,0 +1,17 @@
+<h1>Games</h1>
+
+<%= form_tag game_path(@conn, :create), method: "post" do %>
+  <%= submit "Create Game", class: "btn btn-primary" %>
+<% end %>
+
+<table class="table">
+  <tbody>
+    <%= for game <- @games do %>
+      <tr>
+        <td>
+          <a href="/games/<%= game.id %>">Game <%= game.id %></a>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
