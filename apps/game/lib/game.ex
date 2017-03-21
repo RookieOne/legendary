@@ -1,18 +1,8 @@
 defmodule Game do
-  @moduledoc """
-  Documentation for Game.
-  """
+  alias Game.Board
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Game.hello
-      :world
-
-  """
-  def hello do
-    :world
-  end
+  defstruct [
+    board: %Board{},
+    players: []
+  ]
 end
