@@ -1,3 +1,5 @@
 defmodule Game.Board do
-  defstruct []
+  defstruct [
+    shield_officers: []
+  ]
 end

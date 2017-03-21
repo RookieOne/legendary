@@ -30,7 +30,7 @@ defmodule Game.HeroCard do
     }
   end
 
-  def create(:shield_trooper) do
+  def create(:shield_officer) do
     %HeroCard{
       name: "S.H.I.E.L.D. Officer",
       hero_name: "Maria Hill",

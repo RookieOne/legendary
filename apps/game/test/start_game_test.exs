@@ -7,10 +7,12 @@ defmodule StartGameTest do
     game = StartGame.start_game(%StartGame{number_of_players: 1})
 
     assert Enum.count(game.players) == 1
-    assert game.board != nil
 
     player = hd(game.players)
 
     assert Enum.count(player.deck) == 12
+
+    assert game.board != nil
+    assert Enum.count(game.board.shield_officers) == 30
   end
 end

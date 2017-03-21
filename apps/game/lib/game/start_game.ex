@@ -11,7 +11,9 @@ defmodule Game.StartGame do
   def start_game(details = %StartGame{}) do
     players = for i <- 1..details.number_of_players, do: add_player(i)
     %Game{
-      board: %Board{},
+      board: %Board{
+        shield_officers: create_shield_officers_deck()
+      },
       players: players
     }
   end
@@ -24,5 +26,9 @@ defmodule Game.StartGame do
       name: "Player #{i}",
       deck: List.flatten(agents, troopers)
     }
+  end
+
+  defp create_shield_officers_deck do
+    for _ <- 1..30, do: HeroCard.create(:shield_officer)
   end
 end
