@@ -25,7 +25,7 @@ defmodule Game.StartGame do
     %Player{
       name: "Player #{i}",
       deck: List.flatten(agents, troopers)
-    }
+    } |> Player.draw_hand()
   end
 
   defp create_shield_officers_deck do
