@@ -8,6 +8,10 @@ defmodule Game.Player do
 
   alias Game.Player
 
+  def draw_hand(player = %Player{}, count \\ 6) do
+    Enum.reduce(1..count, player, fn _, p -> draw_card(p) end)
+  end
+
   def draw_card(player = %Player{}) do
     cond do
       length(player.deck) > 0 ->
