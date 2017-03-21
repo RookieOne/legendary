@@ -38,4 +38,5 @@ config :legendary_web, LegendaryWeb.Repo,
   adapter: Ecto.Adapters.Postgres,
   database: "legendary_web_dev",
   hostname: "localhost",
-  pool_size: 10
+  pool_size: 10,
+  extensions: [{Extensions.JSON, library: Poison}]
