@@ -22,9 +22,13 @@ defmodule Game.StartGame do
     agents = for _ <- 1..8, do: HeroCard.create(:shield_agent)
     troopers = for _ <- 1..4, do: HeroCard.create(:shield_trooper)
 
+    deck = [agents, troopers]
+      |> List.flatten()
+      |> Enum.shuffle()
+
     %Player{
       name: "Player #{i}",
-      deck: List.flatten(agents, troopers)
+      deck: deck
     } |> Player.draw_hand()
   end
 
