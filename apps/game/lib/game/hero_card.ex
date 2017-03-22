@@ -1,5 +1,6 @@
 defmodule Game.HeroCard do
   defstruct [
+    id: UUID.uuid4(),
     name: "",
     hero_name: "",
     team_icon: nil,
@@ -9,34 +10,4 @@ defmodule Game.HeroCard do
     cost: 0,
     special_ability: nil
   ]
-
-  alias Game.HeroCard
-
-  def create(:shield_agent) do
-    %HeroCard{
-      name: "S.H.I.E.L.D. Agent",
-      hero_name: "Hero",
-      team_icon: :shield,
-      recruit_points: 1
-    }
-  end
-
-  def create(:shield_trooper) do
-    %HeroCard{
-      name: "S.H.I.E.L.D. Trooper",
-      hero_name: "Hero",
-      team_icon: :shield,
-      attack: 1
-    }
-  end
-
-  def create(:shield_officer) do
-    %HeroCard{
-      name: "S.H.I.E.L.D. Officer",
-      hero_name: "Maria Hill",
-      team_icon: :shield,
-      recruit_points: 2,
-      cost: 3
-    }
-  end
 end

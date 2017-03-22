@@ -4,7 +4,6 @@ defmodule Game.StartGame do
   ]
 
   alias Game.Board
-  alias Game.HeroCard
   alias Game.Player
   alias Game.StartGame
 
@@ -19,8 +18,8 @@ defmodule Game.StartGame do
   end
 
   defp add_player(i) do
-    agents = for _ <- 1..8, do: HeroCard.create(:shield_agent)
-    troopers = for _ <- 1..4, do: HeroCard.create(:shield_trooper)
+    agents = for _ <- 1..8, do: Cards.Shield.create(:shield_agent)
+    troopers = for _ <- 1..4, do: Cards.Shield.create(:shield_trooper)
 
     deck = [agents, troopers]
       |> List.flatten()
@@ -33,6 +32,6 @@ defmodule Game.StartGame do
   end
 
   defp create_shield_officers_deck do
-    for _ <- 1..30, do: HeroCard.create(:shield_officer)
+    for _ <- 1..30, do: Cards.Shield.create(:shield_officer)
   end
 end
