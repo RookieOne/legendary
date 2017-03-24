@@ -1,11 +1,13 @@
 defmodule Game.Player do
   defstruct [
+    id: nil,
     name: "",
     discard: [],
     deck: [],
     hand: [],
     played_cards: [],
-    recruit_points: 0
+    recruit_points: 0,
+    attack: 0,
   ]
 
   alias Game.Player
