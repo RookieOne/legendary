@@ -1,7 +1,7 @@
 defmodule Game.Player.DrawHandTest do
   use ExUnit.Case
 
-  alias Game.Player
+  alias Game.{Cards, Player}
 
   test "if there are 6 cards in the deck, it should draw all 6 cards from deck" do
     player = %Player{

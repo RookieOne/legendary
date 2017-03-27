@@ -10,7 +10,7 @@ defmodule Game.Player do
     attack: 0,
   ]
 
-  alias Game.Player
+  alias Game.{Cards, Player}
 
   def draw_hand(player = %Player{}, count \\ 6) do
     Enum.reduce(1..count, player, fn _, p -> draw_card(p) end)

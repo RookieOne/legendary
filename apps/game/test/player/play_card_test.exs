@@ -1,7 +1,7 @@
 defmodule Game.Player.PlayCardTest do
   use ExUnit.Case
 
-  alias Game.Player
+  alias Game.{Cards, Player}
 
   test "if the player has the card, it should be able to be played" do
     card = Cards.Shield.create(:shield_agent)

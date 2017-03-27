@@ -1,4 +1,4 @@
-defmodule Cards.Shield do
+defmodule Game.Cards.Shield do
   alias Game.HeroCard
 
   def create(:shield_agent) do

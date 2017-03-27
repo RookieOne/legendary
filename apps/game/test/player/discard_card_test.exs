@@ -1,7 +1,7 @@
 defmodule Game.Player.DiscardCardTest do
   use ExUnit.Case
 
-  alias Game.Player
+  alias Game.{Cards, Player}
 
   test "if there the card is in the hand, it should move card from hand to discard" do
     card = Cards.Shield.create(:shield_agent)

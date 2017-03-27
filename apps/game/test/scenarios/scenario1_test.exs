@@ -5,7 +5,7 @@ defmodule Game.Scenarios.Scenario1Test do
 
   use Game.ScenarioCase
 
-  alias Game.{Board, Player}
+  alias Game.{Board, Cards, Player}
 
   setup do
     player1 = %Player{

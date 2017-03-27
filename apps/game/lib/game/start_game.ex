@@ -3,9 +3,7 @@ defmodule Game.StartGame do
     number_of_players: 1
   ]
 
-  alias Game.Board
-  alias Game.Player
-  alias Game.StartGame
+  alias Game.{Board, Cards, Player, StartGame}
 
   def start_game(details = %StartGame{}) do
     players = for i <- 1..details.number_of_players, do: add_player(i)
