@@ -9,7 +9,8 @@ defmodule Game.StartGame do
     players = for i <- 1..details.number_of_players, do: add_player(i)
     %Game{
       board: %Board{
-        shield_officers: create_shield_officers_deck()
+        shield_officers: create_shield_officers_deck(),
+        wounds: create_wounds_deck(),
       },
       players: players
     }
@@ -31,5 +32,9 @@ defmodule Game.StartGame do
 
   defp create_shield_officers_deck do
     for _ <- 1..30, do: Cards.Shield.create(:shield_officer)
+  end
+
+  defp create_wounds_deck do
+    for _ <- 1..30, do: Cards.Wound.create()
   end
 end

@@ -15,5 +15,6 @@ defmodule StartGameTest do
 
     assert game.board != nil
     assert Enum.count(game.board.shield_officers) == 30
+    assert Enum.count(game.board.wounds) == 30
   end
 end
