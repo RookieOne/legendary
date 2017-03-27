@@ -39,4 +39,8 @@ defmodule Game.Cards.Shield do
   def play("S.H.I.E.L.D. Trooper", player) do
     %{player | attack: player.attack + 1}
   end
+
+  def play("S.H.I.E.L.D. Officer", player) do
+    %{player | recruit_points: player.recruit_points + 2}
+  end
 end
